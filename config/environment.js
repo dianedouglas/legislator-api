@@ -25,6 +25,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.myApiKey = process.env.API_KEY;
   }
 
   if (environment === 'test') {
@@ -37,9 +38,11 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+    ENV.myApiKey = process.env.API_KEY;
   }
 
   if (environment === 'production') {
+    ENV.myApiKey = process.env.API_KEY;
 
   }
 
